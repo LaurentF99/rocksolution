@@ -19,12 +19,22 @@ body {
 .neon-outline {
   font-size: 6rem;
   max-width: 90%;
-  width: 100%;
   color: transparent;
   -webkit-text-stroke: 1.5px #ff6600;
   position: relative;
   text-align: center;
   margin: 0;
+  white-space: nowrap;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* Ab Handygröße: Max-Breite z. B. auf 95% Viewport begrenzen */
+@media (max-width: 600px) {
+  .neon-outline {
+    font-size: 4rem;
+    max-width: 95vw;
+  }
 }
 
 @keyframes chaotic-flicker-long {
@@ -52,7 +62,7 @@ body {
 }
 
 .neon-outline::before {
-  content: "Dein Neon-Schriftzug";
+  content: "RockSolution";
   position: absolute;
   top: 0;
   left: 0;
